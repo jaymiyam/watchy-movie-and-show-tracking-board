@@ -31,7 +31,7 @@
   </BaseCard>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import BaseCard from './BaseCard.vue';
 import BasePill from './BasePill.vue';
 import StarRating from './StarRating.vue';

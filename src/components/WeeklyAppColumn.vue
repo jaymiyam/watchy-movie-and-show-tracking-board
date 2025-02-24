@@ -24,12 +24,13 @@
   </BaseColumn>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue';
 import BaseColumn from './BaseColumn.vue';
 import ItemCard from './ItemCard.vue';
 import { useWatchyStore } from '@/stores/watchy';
 import { useLayoutStore } from '@/stores/layout';
+import type { ID } from '@/types/watchyItem';
 
 const watchyStore = useWatchyStore();
 const layoutStore = useLayoutStore();
@@ -53,7 +54,7 @@ const filteredItems = computed(() => {
   );
 });
 
-const handleOpenEditModal = (id) => {
+const handleOpenEditModal = (id: ID) => {
   watchyStore.setEditingItem(id);
   layoutStore.toggleEditItemModal();
 };

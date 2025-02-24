@@ -42,7 +42,7 @@
   </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { RouterLink, useRoute } from 'vue-router';
 import { Icon } from '@iconify/vue/dist/iconify.js';
 import { useLayoutStore } from '@/stores/layout';

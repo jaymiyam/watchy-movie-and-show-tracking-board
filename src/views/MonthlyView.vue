@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import MonthlyAppColumn from '@/components/MonthlyAppColumn.vue';
 const months = [
   'January',

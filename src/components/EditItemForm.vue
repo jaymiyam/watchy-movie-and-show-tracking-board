@@ -123,7 +123,7 @@
   </BaseModal>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import BaseModal from './BaseModal.vue';
 import { ref } from 'vue';
 import { FormKit } from '@formkit/vue';

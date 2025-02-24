@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import WeeklyAppColumn from '@/components/WeeklyAppColumn.vue';
 const weekdays = [
   'Sunday',

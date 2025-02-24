@@ -24,7 +24,7 @@
   </BaseColumn>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue';
 import BaseColumn from './BaseColumn.vue';
 import ItemCard from './ItemCard.vue';
