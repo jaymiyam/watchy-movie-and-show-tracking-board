@@ -28,6 +28,7 @@
 import { computed } from 'vue';
 import BaseColumn from './BaseColumn.vue';
 import ItemCard from './ItemCard.vue';
+import type { ID } from '@/types/watchyItem';
 import { useWatchyStore } from '@/stores/watchy';
 import { useLayoutStore } from '@/stores/layout';
 
@@ -53,7 +54,7 @@ const filteredItems = computed(() => {
     .sort((a, b) => Number(a.isFinished) - Number(b.isFinished));
 });
 
-const handleOpenEditModal = (id) => {
+const handleOpenEditModal = (id: ID) => {
   watchyStore.setEditingItem(id);
   layoutStore.toggleEditItemModal();
 };

@@ -1,35 +1,37 @@
-<!-- TODO: write README -->
+# 📺 Watchy – A Movie & Show Tracking Board
 
-# watchy
+**Watchy** is a Trello-style tracking app for organizing movies, TV shows, and anime you want to watch. It features a **monthly board layout**, a **weekly updating view**, filtering and sorting support for easy organization.
 
-This template should help get you started developing with Vue 3 in Vite.
+---
 
-## Recommended IDE Setup
+## 🍿 Overview
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Watchy was built as a fun learning project and a personal solution to a common problem. As someone who loves watching different shows, I often found myself trying to remember movies I wanted to watch or jotting down show updates in my iPhone notes. So, I decided to create a "Trello Board for my watch list"—a simple yet effective way to keep everything in one place. And that's how Watchy was born!
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Screenshot
 
-## Customize configuration
+![Watchy Screenshot](/watchy-light-mode-screenshot.png)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## 🚀 Features
 
-```sh
-npm install
-```
+✅ **Monthly Board View** – Drag and drop items into months for planned watching.  
+✅ **Weekly View** – See currently updating shows grouped by weekday.  
+✅ **Star Ratings** – Rate shows after finishing them.  
+✅ **Dark Mode & Light Mode** – Toggle between themes.  
+✅ **Local Storage** – No backend needed, data is saved in your browser.  
+✅ **Filter & Organize** – Sort by **finished status or category**.  
+✅ **Reset Button** – Start fresh with a single click.
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
-npm run dev
-```
+## 🛠️ Tech Stack
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+- **Vue 3** + **Vite**
+- **Pinia** for state management
+- **VueUse** for utility functions
+- **FormKit** for form validation
+- **Local Storage** for persistent data

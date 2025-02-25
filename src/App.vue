@@ -19,6 +19,7 @@
   <Transition name="modal">
     <EditItemForm
       v-if="layoutStore.showEditItemModal"
+      v-model="watchyStore.editingItem"
       @close-modal="layoutStore.toggleEditItemModal()"
     />
   </Transition>

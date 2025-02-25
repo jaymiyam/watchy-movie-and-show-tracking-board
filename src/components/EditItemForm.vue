@@ -3,7 +3,7 @@
     <div class="flex gap-2 items-center mb-4">
       <h2 class="text-xl font-bold dark:text-white">Edit watcher</h2>
       <button
-        @click="handleDeleteItem"
+        @click="handleDeleteItem(editingItem.id)"
         class="inline-flex items-center justify-center cursor-pointer text-neutral-400 hover:text-neutral-800"
       >
         <Icon icon="material-symbols:delete-outline" width="28" height="28" />
@@ -128,26 +128,30 @@ import BaseModal from './BaseModal.vue';
 import { ref } from 'vue';
 import { FormKit } from '@formkit/vue';
 import { Icon } from '@iconify/vue/dist/iconify.js';
+import type { WatchyItem, ID } from '@/types/watchyItem';
 import { useWatchyStore } from '@/stores/watchy';
 const watchyStore = useWatchyStore();
 
-const editingItem = ref();
+const modelValue = defineModel();
+
+const editingItem = ref<WatchyItem>(
+  JSON.parse(JSON.stringify(modelValue.value))
+);
 
 const emits = defineEmits(['close-modal']);
-editingItem.value = watchyStore.editingItem;
 
 function handleCloseModal() {
   emits('close-modal');
 }
 
 function handleEditItem() {
-  watchyStore.updateWatchyItem(editingItem);
+  watchyStore.updateWatchyItem(editingItem.value);
   emits('close-modal');
 }
 
-function handleDeleteItem() {
+function handleDeleteItem(id: ID) {
   if (confirm('Do you wish to delete this item?')) {
-    watchyStore.deleteWatchyItem(editingItem.id);
+    watchyStore.deleteWatchyItem(id);
     emits('close-modal');
   } else {
     return;

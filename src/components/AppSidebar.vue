@@ -4,7 +4,7 @@
     :class="showSidebar ? 'translate-x-0 w-[240px]' : 'translate-x-[-100%] w-0'"
   >
     <!-- app logo -->
-    <div class="p-6 text-3xl font-bold">👀 watchy</div>
+    <div class="p-6 text-3xl font-bold">📺 watchy</div>
     <!-- sidebar nav -->
     <nav class="h-full flex flex-col justify-between">
       <ul>
@@ -35,7 +35,7 @@
         >
       </ul>
       <button
-        @click="handleResetBoard"
+        @click="handleResetBoard()"
         class="text-xs text-neutral-400 font-bold px-6 flex gap-1 justify-center items-center hover:underline hover:text-neutral-700 cursor-pointer"
       >
         <Icon icon="material-symbols:delete-outline" width="20" height="20" />

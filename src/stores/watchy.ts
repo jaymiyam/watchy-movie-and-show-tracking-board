@@ -6,7 +6,32 @@ import type { WatchyItem, ID } from '@/types/watchyItem';
 export const useWatchyStore = defineStore('WatchyStore', () => {
   const filterFlag = ref('');
   const editingItemFlag = ref('');
-  const watchyItems = useLocalStorage<WatchyItem[]>('watchyItems', []);
+  const watchyItems = useLocalStorage<WatchyItem[]>('watchyItems', [
+    {
+      id: crypto.randomUUID(),
+      title: '(DEMO) Dune 2',
+      category: 'Movie',
+      country: 'US',
+      month: 'January',
+      genre: 'Action',
+      isUpdating: false,
+      updateWeekday: 'Monday',
+      isFinished: true,
+      rating: 4,
+    },
+    {
+      id: crypto.randomUUID(),
+      title: '(DEMO) Emily In Paris - Seaso 4',
+      category: 'Drama',
+      country: 'US',
+      month: 'March',
+      genre: 'Romance',
+      isUpdating: true,
+      updateWeekday: 'Wednesday',
+      isFinished: false,
+      rating: 1,
+    },
+  ]);
   const filteredWatchyItems = computed(() => {
     if (!filterFlag.value) {
       return watchyItems.value;
@@ -23,7 +48,6 @@ export const useWatchyStore = defineStore('WatchyStore', () => {
 
   function setEditingItem(id: ID) {
     editingItemFlag.value = id;
-    // console.log(id, editingItem);
   }
 
   function addWatchyItem(item: WatchyItem) {
