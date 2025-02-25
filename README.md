@@ -12,7 +12,7 @@ Watchy was built as a fun learning project and a personal solution to a common p
 
 ## Screenshot
 
-![Watchy Screenshot](/watchy-light-mode-screenshot.png)
+![Watchy Screenshot](/public/watchy-light-mode-screenshot.png)
 
 ---
 
