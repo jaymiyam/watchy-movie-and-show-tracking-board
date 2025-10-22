@@ -5,7 +5,7 @@
       :class="
         isCurrentMonth
           ? 'text-black font-bold underline'
-          : 'text-neutral-600 font-medium'
+          : 'text-neutral-600 font-bold'
       "
     >
       {{ month }}
